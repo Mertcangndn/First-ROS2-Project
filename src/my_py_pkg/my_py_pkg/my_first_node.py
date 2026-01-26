@@ -1,7 +1,14 @@
+#!/usr/bin/env python3
+
 import rclpy
+from rclpy.node import Node
 
 def main(args=None):
-    pass
+    rclpy.init(args=args)
+    node = Node("python_test")
+    node.get_logger().info("Hello I'm alive!")
+#    rclpy.spin(node)
+    rclpy.shutdown()
 
 if __name__ == "__main__":
     main()
