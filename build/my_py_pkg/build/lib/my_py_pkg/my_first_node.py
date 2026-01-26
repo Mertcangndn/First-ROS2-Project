@@ -3,10 +3,18 @@
 import rclpy
 from rclpy.node import Node
 
+class MyNode(Node):
+    def __init__(self):
+        super().__init__("python_test") #Node'un ismini buraya yazıyoruz.
+        self.get_logger().info("Hello, I'm alive!")
+        self.create_timer(0.5,self.timer_callback)
+    
+    def timer_callback(self):
+        self.get_logger().info("Hello")
+
 def main(args=None):
     rclpy.init(args=args)
-    node = Node("python_test")
-    node.get_logger().info("Hello I'm alive!")
+    node = MyNode()
     rclpy.spin(node)
     rclpy.shutdown()
 
