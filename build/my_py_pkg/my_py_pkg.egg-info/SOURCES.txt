@@ -10,6 +10,8 @@ setup.py
 ../../build/my_py_pkg/my_py_pkg.egg-info/zip-safe
 my_py_pkg/__init__.py
 my_py_pkg/my_first_node.py
+my_py_pkg/robot_state_publisher.py
+my_py_pkg/robot_state_subscriber.py
 resource/my_py_pkg
 test/test_copyright.py
 test/test_flake8.py
